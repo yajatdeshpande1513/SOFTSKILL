@@ -3,6 +3,7 @@
 
 <head>
     <title>Tech Career Simulator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
@@ -283,22 +284,87 @@ h1::after {
 }
 
 /* Responsive improvements */
+/* Responsive improvements */
 @media (max-width: 768px) {
     .scenario-container {
         margin: 1rem;
         padding: 1.5rem;
+        width: 90%;
+        max-width: 100%;
     }
     
     h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
     }
     
     .career-title {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
     
     .scenario-card {
+        padding: 1.2rem;
+        margin: 1.2rem 0;
+    }
+    
+    .options-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .option-btn {
+        padding: 1rem;
+        font-size: 0.95rem;
+        margin-bottom: 12px;
+    }
+    
+    .scenario-image {
+        height: 180px;
+    }
+    
+    #progress {
+        margin: 1.5rem 0;
+    }
+    
+    #result {
         padding: 1.5rem;
+    }
+    
+    .restart-btn {
+        padding: 0.8rem 1.5rem;
+    }
+}
+
+/* Additional Mobile Optimizations */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .scenario-container {
+        padding: 1.2rem;
+        margin: 0.5rem;
+        border-radius: 16px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    h1::after {
+        width: 60px;
+    }
+    
+    .career-title {
+        font-size: 1.4rem;
+    }
+}
+
+/* Fix for mobile viewport height */
+@media (max-height: 800px) {
+    body {
+        min-height: 100%;
+        height: auto;
+        padding: 20px 0;
     }
 }
 .small-btn {
@@ -323,6 +389,17 @@ h1::after {
         transform: translateY(-1px);
         box-shadow: 0 2px 8px rgba(99, 179, 237, 0.2);
     }
+    /* Touch optimization */
+.option-btn, .restart-btn, .small-btn {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+/* Fix for iOS devices */
+body {
+    -webkit-text-size-adjust: 100%;
+}
 
     </style>
 </head>
