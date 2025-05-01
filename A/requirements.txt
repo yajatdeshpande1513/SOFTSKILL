@@ -5,3 +5,4 @@ numpy==1.21.0
 joblib==1.0.1
 gunicorn
 gevent>=1.4
+werkzeug<3.0  
